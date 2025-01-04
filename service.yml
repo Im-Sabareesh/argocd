@@ -8,5 +8,5 @@ spec:
   ports:
   - port: 80
   selector:
-    app: apache
+    app: tomcat
   type: LoadBalancer

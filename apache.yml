@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache
+  labels:
+    app: apache
+spec:
+  selector:
+    matchLabels:
+      app: apache
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: apache
+    spec:
+      containers:
+      - image: httpd
+        name: apache
+        ports:
+        - containerPort: 80
+          name: apache

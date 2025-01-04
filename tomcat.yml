@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tomcat
   labels:
-    app: 
+    app: tomcat
 spec:
   selector:
     matchLabels:

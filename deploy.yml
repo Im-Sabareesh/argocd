@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: laravel
-          image: 043309364774.dkr.ecr.us-east-1.amazonaws.com/laracoffee:18
+          image: 043309364774.dkr.ecr.us-east-1.amazonaws.com/laracoffee:19
           ports:
           - containerPort: 8000
           env:

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: laravel
-          image: 043309364774.dkr.ecr.us-east-1.amazonaws.com/laracoffee:19
+          image: 043309364774.dkr.ecr.us-east-1.amazonaws.com/laracoffee:17
           ports:
           - containerPort: 8000
           env:
@@ -34,6 +34,13 @@ spec:
             - name: env-config
               mountPath: /var/www/.env
               subPath: .env
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
       volumes:
         - name: env-config
           configMap:
